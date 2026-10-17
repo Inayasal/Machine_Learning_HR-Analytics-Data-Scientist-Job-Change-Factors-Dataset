@@ -47,6 +47,13 @@ Dataset berisi informasi mengenai kandidat Data Scientist, seperti:
 
 Target prediksi digunakan untuk mengetahui kemungkinan kandidat melakukan perubahan atau mencari pekerjaan baru.
 
+## Sumber Dataset
+Dataset yang digunakan dalam proyek HR Analytics: Data Scientist Job Change Factors berasal dari Kaggle.
+
+Nama dataset: HR Analytics: Data Scientist Job Change Factors
+Platform: Kaggle
+Link dataset: [https://www.kaggle.com/datasets/obaidhere/hr-analytics-data-scientist-job-change-factors]
+
 ## Teknologi yang Digunakan
 
 1. Python
