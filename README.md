@@ -71,9 +71,9 @@ Dataset yang digunakan dalam proyek ini berasal dari Kaggle:
 
 ## 📌 Evaluasi Model: Apakah MAE, MSE, dan R² Harus Mendekati 1?
 
-> ### 💡 Ringkasan Jawaban:
-> - **MAE** : ❌ **TIDAK**, nilai MAE harus **mendekati 0** (semakin kecil, semakin baik).
-> - **MSE** : ❌ **TIDAK**, nilai MSE harus **mendekati 0** (semakin kecil, semakin baik).
+> ###  Ringkasan Jawaban:
+> - **MAE** : **TIDAK**, nilai MAE harus **mendekati 0** (semakin kecil, semakin baik).
+> - **MSE** : **TIDAK**, nilai MSE harus **mendekati 0** (semakin kecil, semakin baik).
 > - **R² (R-Squared)** : ✔️ **YA**, nilai R² harus **mendekati 1** (semakin mendekati 1, semakin baik).
 
 ### Perbandingan Ringkas Metrik Evaluasi
@@ -86,38 +86,6 @@ Dataset yang digunakan dalam proyek ini berasal dari Kaggle:
 
 ---
 
-### Penjelasan Rinci Masing-Masing Metrik
-
-#### 1. MAE (*Mean Absolute Error*)
-- **Definisi:** MAE mengukur rata-rata magnitudo kesalahan dalam satu set prediksi, tanpa mempertimbangkan arahnya (positif atau negatif).
-- **Rumus:**
-  $$\text{MAE} = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$$
-- **Interpretasi Nilai:**
-  - Nilai MAE berada pada rentang $[0, +\infty)$.
-  - **Semakin kecil nilainya (mendekati 0)**, semakin akurat modelnya karena selisih antara nilai sebenarnya dengan nilai tebakan sangat kecil.
-  - Jika MAE = 1 (pada target biner 0 dan 1), itu berarti model selalu meleset sebesar jarak penuh target. Maka dari itu, **MAE tidak boleh mendekati 1**.
-
-#### 2. MSE (*Mean Squared Error*)
-- **Definisi:** MSE mengukur rata-rata dari kuadrat selisih antara nilai aktual dengan prediksi model.
-- **Rumus:**
-  $$\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
-- **Interpretasi Nilai:**
-  - Karena dikuadratkan, nilai MSE selalu $\ge 0$.
-  - Kuadrat memberikan penalti eksponensial terhadap kesalahan yang besar (outlier).
-  - Sama halnya dengan MAE, MSE adalah metrik kesalahan (*error*). Oleh karena itu, **nilai yang diinginkan adalah sedekat mungkin ke 0**, bukan ke 1.
-
-#### 3. R² Score (*Koefisien Determinasi*)
-- **Definisi:** $R^2$ mengukur seberapa baik model regresi merepresentasikan data dibandingkan dengan model baseline sederhana (garis rata-rata target $\bar{y}$).
-- **Rumus:**
-  $$R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}$$
-- **Interpretasi Nilai:**
-  - Nilai $R^2$ normal berkisar antara **0 hingga 1**:
-    - **$R^2 = 1.0$ (100%)**: Garis model mencocokkan data secara sempurna.
-    - **$R^2 = 0.0$**: Model tidak memiliki daya prediksi lebih baik daripada sekadar menebak rata-rata target.
-    - **$R^2 < 0$ (negatif)**: Model berkinerja lebih buruk daripada sekadar menebak nilai rata-rata.
-  - Kesimpulan: Untuk $R^2$, **semakin mendekati 1 maka performa model semakin bagus**.
-
----
 
 ## 📊 Hasil Evaluasi Model pada Notebook
 
